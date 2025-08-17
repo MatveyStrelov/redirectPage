@@ -146,6 +146,13 @@
     </div>
   </body>
   <script>
+    // Redirect URL
+    // Выберете URL для перенаправления
+    const redirectUrl = "";
+    
+    //auto redirect
+    window.location.assign(redirectUrl);
+    
     // Detect user's device language
     // and show the corresponding block
     const userDeviceLang = window.navigator.language;
@@ -159,17 +166,14 @@
       }
     }
     translate();
-    // Redirect URL
-    // Выберете URL для перенаправления
-    const redirectUrl = "";
+    
 
     // Redirect links
     document.querySelectorAll(".link").forEach((link) => {
       link.href = redirectUrl;
     });
 
-    //auto redirect
-    window.location.assign(redirectUrl);
+    
 
     //Made by Matvey Strelov
     //Devitex
