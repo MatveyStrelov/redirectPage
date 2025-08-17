@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <style>
+      .link {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        display: none;
+      }
+      .block-en {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .show {
+        display: initial;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ru" class="block">
+      <p>Перенаправление&nbsp;</p>
+      <a class="link">Нажмите здесь, если перенаправление не произошло</a>
+    </div>
+
+    <div id="uk" class="block">
+      <p>Перенаправлення&nbsp;</p>
+      <a class="link">Натисніть тут, якщо перенаправлення не відбулося</a>
+    </div>
+
+    <div id="fr" class="block">
+      <p>Redirection en cours&nbsp;</p>
+      <a class="link">Cliquez ici si vous n'êtes pas redirigé</a>
+    </div>
+
+    <div id="lt" class="block">
+      <p>Peradresuojama&nbsp;</p>
+      <a class="link">Spustelėkite čia, jei nebuvote peradresuotas</a>
+    </div>
+
+    <div id="de" class="block">
+      <p>Weiterleitung&nbsp;</p>
+      <a class="link">Klicken Sie hier, wenn Sie nicht weitergeleitet werden</a>
+    </div>
+
+    <div id="es" class="block">
+      <p>Redirigiendo&nbsp;</p>
+      <a class="link">Haz clic aquí si no eres redirigido</a>
+    </div>
+
+    <div id="it" class="block">
+      <p>Reindirizzamento&nbsp;</p>
+      <a class="link">Clicca qui se non sei stato reindirizzato</a>
+    </div>
+
+    <div id="pl" class="block">
+      <p>Przekierowywanie&nbsp;</p>
+      <a class="link">Kliknij tutaj, jeśli nie zostałeś przekierowany</a>
+    </div>
+
+    <div id="tr" class="block">
+      <p>Yönlendiriliyor&nbsp;</p>
+      <a class="link">Yönlendirilmediyseniz buraya tıklayın</a>
+    </div>
+
+    <div id="zh" class="block">
+      <p>正在跳转&nbsp;</p>
+      <a class="link">如果没有跳转，请点击这里</a>
+    </div>
+
+    <div id="ja" class="block">
+      <p>リダイレクト中&nbsp;</p>
+      <a class="link">リダイレクトされない場合はこちらをクリック</a>
+    </div>
+
+    <div id="ko" class="block">
+      <p>리디렉션 중&nbsp;</p>
+      <a class="link">자동으로 이동하지 않으면 여기를 클릭하세요</a>
+    </div>
+
+    <div id="fi" class="block">
+      <p>Uudelleenohjaus&nbsp;</p>
+      <a class="link">Napsauta tästä, jos sinua ei ohjata automaattisesti</a>
+    </div>
+
+    <div id="no" class="block">
+      <p>Omdirigerer&nbsp;</p>
+      <a class="link">Klikk her hvis du ikke blir omdirigert</a>
+    </div>
+
+    <div id="pt" class="block">
+      <p>Redirecionando&nbsp;</p>
+      <a class="link">Clique aqui se você não for redirecionado</a>
+    </div>
+
+    <div id="nl" class="block">
+      <p>Bezig met doorverwijzen&nbsp;</p>
+      <a class="link">Klik hier als je niet wordt doorgestuurd</a>
+    </div>
+
+    <div id="cs" class="block">
+      <p>Přesměrování&nbsp;</p>
+      <a class="link">Klikněte zde, pokud nejste přesměrováni</a>
+    </div>
+
+    <div id="ar" class="block" dir="rtl">
+      <p>جاري إعادة التوجيه&nbsp;</p>
+      <a class="link">اضغط هنا إذا لم يتم إعادة توجيهك</a>
+    </div>
+
+    <div id="et" class="block">
+      <p>Ümbersuunamine&nbsp;</p>
+      <a class="link">Klõpsake siin, kui teid ei suunata automaatselt</a>
+    </div>
+
+    <div id="kk" class="block">
+      <p>Бағытталуда&nbsp;</p>
+      <a class="link">Егер қайта бағытталмасаңыз, осында басыңыз</a>
+    </div>
+
+    <div id="ky" class="block">
+      <p>Багытталууда&nbsp;</p>
+      <a class="link">Эгер кайра багытталбасаңыз, бул жерди басыңыз</a>
+    </div>
+
+    <div id="tg" class="block">
+      <p>Ба равона карда мешавад&nbsp;</p>
+      <a class="link">Агар равона карда нашудед, ин ҷо клик кунед</a>
+    </div>
+
+    <div id="uz" class="block">
+      <p>Yo'naltirilmoqda&nbsp;</p>
+      <a class="link">Agar yo'naltirilmagan bo'lsangiz, shu yerni bosing</a>
+    </div>
+    <div id="en" class="block-en">
+      <p>Redirecting&nbsp;</p>
+      <a class="link">Click here if you are not redirected</a>
+    </div>
+  </body>
+  <script>
+    // Detect user's device language
+    // and show the corresponding block
+    const userDeviceLang = window.navigator.language;
+    const userDeviceLangCode = userDeviceLang.substring(0, 2);
+    console.log(userDeviceLangCode);
+
+    function translate() {
+      const langBlock = document.getElementById(userDeviceLangCode);
+      if (langBlock) {
+        langBlock.classList.add("show");
+      }
+    }
+    translate();
+    // Redirect URL
+    // Выберете URL для перенаправления
+    const redirectUrl = "";
+
+    // Redirect links
+    document.querySelectorAll(".link").forEach((link) => {
+      link.href = redirectUrl;
+    });
+
+    //auto redirect
+    window.location.assign(redirectUrl);
+
+    //Made by Matvey Strelov
+    //Devitex
+  </script>
+  <!-- Made By Matvey Strelov for Devitex -->
+</html>
